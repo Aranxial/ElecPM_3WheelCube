@@ -6,7 +6,7 @@ To control the speeds of each wheels, in another terminal, use the command: ``ig
 ### Viewing the .xacro file in rviz2
 * Open a terminal and use the command: ``ros2 run joint_state_publisher joint_state_publisher`` (without this, the continuous/revolute joints won't work)
 * In another terminal, use the command: ``ros2 run robot_state_publisher robot_state_publisher --ros-args -p robot_description:="$( xacro path/to/spawn_cube.xacro )"``. This will create a topic named 'robot_description' (can be changed).
-* In another terminal, use the command: ``rviz2 view_cube.rviz`` to open the .rviz file (settings are all set).
+* In another terminal, use the command: ``rviz2 view_cube.rviz`` to open the .rviz file (settings are all set). Or open rviz using the command ``rviz`` and set the required settings manually (fixed frame => my_world, Add RobotModel => Description Topic => 'robot_description')
 
 ### Spawning the cube in gazebo using the xacro file
 * Open the .sdf file for creating a ground in gazebo for our cube to rest on: use ``ign gazebo ground.sdf`` (comes with lighting xD)

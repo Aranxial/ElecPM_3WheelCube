@@ -12,4 +12,4 @@ To control the speeds of each wheels, in another terminal, use the command: ``ig
 * Open the .sdf file for creating a ground in gazebo for our cube to rest on: use ``ign gazebo ground.sdf`` (comes with lighting xD)
 * Do the first two steps in the above section to create the topic 'robot_description', and then use: ``ros2 run ros_gz_sim create -topic robot_description -n my_bot`` (Note: this code is for ignition, for classic the changes are: 'ros_gz_sim' => 'gazebo_ros', 'create' => 'spawn_entity.py' and 'n' => 'entity')
 
-
+[Gazebo Classic ROS 2 Packages Migration Documentation](https://gazebosim.org/docs/fortress/migrating_gazebo_classic_ros2_packages)

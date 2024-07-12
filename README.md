@@ -9,6 +9,7 @@ To control the speeds of each wheels, in another terminal, use the command: ``ig
 * In another terminal, use the command: ``rviz2 view_cube.rviz`` to open the .rviz file (settings are all set).
 
 ### Spawning the cube in gazebo using the xacro file
-*Open the .sdf file for creating a ground in gazebo for our cube to rest on: use ``ign gazebo ground.sdf`` (comes with lighting xD)
-*Do the first two steps in the above section to create the topic 'robot_description', and then use: ``ros2 run ros_gz_sim create -topic robot_description -n my_bot`` (Note: this code is for ignition, for classic the changes are: 'create' => 'spawn_entity.py' and 'n' => 'entity')
+* Open the .sdf file for creating a ground in gazebo for our cube to rest on: use ``ign gazebo ground.sdf`` (comes with lighting xD)
+* Do the first two steps in the above section to create the topic 'robot_description', and then use: ``ros2 run ros_gz_sim create -topic robot_description -n my_bot`` (Note: this code is for ignition, for classic the changes are: 'ros_gz_sim' => 'gazebo_ros', 'create' => 'spawn_entity.py' and 'n' => 'entity')
+
 

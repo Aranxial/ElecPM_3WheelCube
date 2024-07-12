@@ -2,12 +2,12 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="robot">
 	
 	   <!-- This first link called "world" is empty -->
-    <link name="world"></link>
+    <link name="my world"></link>
     
         <!-- The base origin is offset from the world origin. -->
     <joint name="base_joint" type="floating">
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="world"/>
+        <parent link="my world"/>
         <child link="cube_frame"/>        
     </joint>
     

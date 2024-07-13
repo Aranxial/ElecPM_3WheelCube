@@ -3,6 +3,8 @@ In this model, the Cube uses three actuator wheels (colored in <span style="colo
 
 To control the speeds of each wheels, in another terminal, use the command: ``ign topic -t "/cmd_vel_$(color)" -m ignition.msgs.Double -p "data: $(velocity)"``, instead of 'color' use 'r','y' or 'g' and instead of 'velocity' use the speed you need for the wheel in 'color'.
 
+To integrate ROS commands in gazebo, we can use ROS Gazebo Bridge. For that use the command: ``ros2 run ros_ign_bridge parameter_bridge /cmd_vel_$(color)@std_msgs/msg/Float64@ignition.msgs.Double``. Now we can change the velocity using: ``ros2 topic pub /cmd_vel_$(color) std_msgs/msg/Float64 "{data: $(velocity)}"``
+
 ### Viewing the .xacro file in rviz2
 * Open a terminal and use the command: ``ros2 run joint_state_publisher joint_state_publisher`` (without this, the continuous/revolute joints won't work)
 * In another terminal, use the command: ``ros2 run robot_state_publisher robot_state_publisher --ros-args -p robot_description:="$( xacro path/to/spawn_cube.xacro )"``. This will create a topic named 'robot_description'.
